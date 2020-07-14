@@ -9,6 +9,12 @@ if (votingAge>=18){
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+var normal = "normal";
+if (5>4){
+    let normal = "notnormal";
+    
+    }
+console.log(normal);
 
 
 
@@ -73,11 +79,26 @@ function dogFeeder(pound, age){
         console.log(rawfood)
         }
     }
-    elif (age<1){
-        let months
+    else if(age<=1){
+        
+        if (age*12>=2 && age*12<=4){
+            let rawfood = pound * 0.1;
+            console.log(rawfood)
+        }
+        else if (age*12>=4 && age*12<=7){
+            let rawfood = pound * 0.05;
+            console.log(rawfood)
+        }
+        else if (age*12>=7 && age*12<=12){
+        let rawfood = pound *0.04;
+        console.log(rawfood)
+        }
+
     }
+
+    
 }
-dogFeeder(15,1)
+dogFeeder(15,.25)
   
 
 
@@ -119,6 +140,14 @@ function kilometersToMiles(KM) {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+  function annoyingSong(number){
+    let count = number;
+    while (count < 10) {
+        console.log(count);
+        count +=2;
+    }
+
+  }
   
 
 
@@ -134,23 +163,23 @@ function kilometersToMiles(KM) {
 //and anything below 60 should be F
 function grades(percent){
     if (percent>=90 && percent<=100) {
-        console.log("A")
+        console.log("A");
     }
     else if (percent>=80 && percent<=90) {
-        console.log("B")
+        console.log("B");
     }
-    if (percent>=90 && percent<=100) {
-        console.log("C")
+    else if (percent>=70 && percent<=80) {
+        console.log("C");
     }
-    if (percent>=90 && percent<=100) {
-        console.log("D")
+    else if (percent>=60 && percent<=70) {
+        console.log("D");
     }
-    if (percent>=90 && percent<=100) {
-        console.log("A")
+    else if (percent<60) {
+        console.log("F");
     }
 }
   
-
+grades(66)
   
   
 
