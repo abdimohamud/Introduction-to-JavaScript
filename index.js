@@ -1,7 +1,9 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-const votingAge = 18;
-if (votingAge>=18){
+let votingAge = 18;
+let age = 20;
+
+if (age>votingAge){
     console.log(true);
 }
 
@@ -9,13 +11,11 @@ if (votingAge>=18){
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-var normal = "normal";
-if (5>4){
-    let normal = "notnormal";
-    
-    }
-console.log(normal);
-
+let name = 'Abdi'
+name = 'AB'
+if (name = 'AB') {
+    console.log (name);
+}
 
 
 
@@ -110,8 +110,22 @@ dogFeeder(15,.25)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-function rockPaperScissors(string) {
-}
+function rockpaperscissors(hand) {
+    let npc = Math.random();
+    //Rock
+    if (npc < 0.3) {
+      return "you tied";
+    }
+    //Paper
+    if (npc > 0.3 && npc < 0.6) {
+      return "you lost";
+    }
+    //Scissors
+    if (npc > 0.6) {
+      return "you won";
+    }
+  }
+
   
   
 
@@ -140,14 +154,12 @@ function kilometersToMiles(KM) {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  function annoyingSong(number){
-    let count = number;
-    while (count < 10) {
-        console.log(count);
-        count +=2;
+function annoyingSong(input){
+    for (let i = input; i >= 1; i--){
+        console.log( i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around, " +  (i - 1) + " bottles of soda on the wall!");
     }
+}
 
-  }
   
 
 
@@ -179,8 +191,7 @@ function grades(percent){
     }
 }
   
-grades(66)
-  
+
   
 
 /************************************************************** Stretch **************************************************************/
